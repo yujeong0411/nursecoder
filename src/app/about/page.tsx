@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import {
-  Mail,
   BookOpen,
   ArrowUpRight,
   HeartPulse,
@@ -9,6 +8,7 @@ import {
   Notebook,
 } from "lucide-react";
 import { profile } from "@/data/profile";
+import { EmailRow } from "@/components/EmailRow";
 
 export const metadata: Metadata = {
   title: "소개 — NurseCoder",
@@ -118,26 +118,7 @@ export default function AboutPage() {
       <section className="space-y-4">
         <h2 className="text-ink text-[20px]">연락하기</h2>
         <div className="bg-surface border border-hairline rounded-xl divide-y divide-hairline">
-          <a
-            href={`mailto:${profile.email}`}
-            className="flex items-center gap-3 px-4 py-3 group hover:bg-coral-soft/40 transition-colors first:rounded-t-xl"
-          >
-            <span className="w-9 h-9 rounded-md bg-coral-soft text-coral flex items-center justify-center shrink-0">
-              <Mail className="w-[18px] h-[18px]" aria-hidden="true" />
-            </span>
-            <div className="flex-1 min-w-0">
-              <p className="text-ink text-[14px] group-hover:text-coral transition-colors">
-                Email
-              </p>
-              <p className="text-ink-mute text-[12px] truncate">
-                {profile.email}
-              </p>
-            </div>
-            <ArrowUpRight
-              className="w-4 h-4 text-ink-mute shrink-0"
-              aria-hidden="true"
-            />
-          </a>
+          <EmailRow email={profile.email} />
 
           <a
             href={profile.github}

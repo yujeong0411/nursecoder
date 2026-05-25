@@ -111,7 +111,7 @@ export default async function ToolDetailPage({
             href={tool.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 sm:gap-1.5 bg-white text-ink-soft border border-hairline px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-[10px] text-[12px] sm:text-[14px] hover:text-ink hover:border-ink-mute/30 transition-colors"
+            className="inline-flex items-center gap-1 sm:gap-1.5 bg-blush text-ink-soft border border-hairline px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-[10px] text-[12px] sm:text-[14px] hover:text-ink hover:border-ink-mute/30 transition-colors"
           >
             <ExternalLink
               className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -125,7 +125,7 @@ export default async function ToolDetailPage({
             href={tool.issueUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 sm:gap-1.5 bg-white text-ink-soft border border-hairline px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-[10px] text-[12px] sm:text-[14px] hover:text-ink hover:border-ink-mute/30 transition-colors"
+            className="inline-flex items-center gap-1 sm:gap-1.5 bg-blush text-ink-soft border border-hairline px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-[10px] text-[12px] sm:text-[14px] hover:text-ink hover:border-ink-mute/30 transition-colors"
           >
             <AlertCircle
               className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -144,7 +144,7 @@ export default async function ToolDetailPage({
               src={tool.screenshot}
               alt={`${tool.name} 스크린샷`}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>

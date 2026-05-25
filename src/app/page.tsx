@@ -41,7 +41,7 @@ export default function Home() {
             </Link>
             <Link
               href="/about"
-              className="inline-flex items-center bg-white text-ink-soft border border-hairline px-4 py-2 rounded-[10px] text-[14px] hover:text-ink hover:border-ink-mute/30 transition-colors"
+              className="inline-flex items-center bg-blush text-ink-soft border border-hairline px-4 py-2 rounded-[10px] text-[14px] hover:text-ink hover:border-ink-mute/30 transition-colors"
             >
               소개
             </Link>

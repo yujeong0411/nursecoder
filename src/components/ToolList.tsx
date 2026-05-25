@@ -33,7 +33,7 @@ export function ToolList({ tools }: { tools: Tool[] }) {
               aria-selected={isActive}
               onClick={() => setActive(f.value)}
               className={
-                "px-3 py-1 rounded-full text-[13px] transition-colors " +
+                "px-3 py-1 rounded-full text-[13px] cursor-pointer transition-colors " +
                 (isActive
                   ? "bg-coral text-white"
                   : "bg-surface text-ink-soft border border-hairline hover:text-ink")

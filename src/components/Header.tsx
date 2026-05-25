@@ -16,9 +16,9 @@ export function Header() {
             priority
             className="rounded-md"
           />
-          <span className="text-ink text-[15px]">
-            <span className="text-coral">Nurse</span>
-            <span className="text-sage">Coder</span>
+          <span className="hidden sm:inline text-ink text-[15px]">
+            <span className="text-coral-deep">Nurse</span>
+            <span className="text-sage-deep">Coder</span>
           </span>
         </Link>
 

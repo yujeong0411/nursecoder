@@ -15,15 +15,17 @@
   --color-coral-soft: #fceded;
   --color-sage-soft: #eaf4ee;
   --color-lavender-soft: #f2edf7;
+  --color-blush: #fef6f0;
 
   /* 카테고리 텍스트 (진한 톤) */
+  --color-coral-deep: #d58787;
   --color-sage-deep: #6fb089;
   --color-lavender-deep: #9b83bd;
 
   /* 텍스트 */
   --color-ink: #6b4f56;
-  --color-ink-soft: #8b6b73;
-  --color-ink-mute: #a89399;
+  --color-ink-soft: #735660;
+  --color-ink-mute: #8e7680;
 
   /* 테두리 */
   --color-hairline: rgba(139, 107, 115, 0.12);

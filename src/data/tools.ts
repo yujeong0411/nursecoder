@@ -41,6 +41,7 @@ export const tools: Tool[] = [
     status: "active",
     icon: "StickyNote",
     featured: true,
+    screenshot: "/screenshots/slide-memo.png",
     downloadUrl:
       "https://github.com/yujeong0411/SlideMemo/releases/latest/download/SlideMemo-Setup.exe",
     githubUrl: "https://github.com/yujeong0411/SlideMemo",
