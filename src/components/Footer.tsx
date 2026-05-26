@@ -17,7 +17,7 @@ function GitHubIcon({ className }: { className?: string }) {
 export function Footer() {
   return (
     <footer className="border-t border-hairline bg-bg mt-16">
-      <div className="max-w-3xl mx-auto px-7 py-5 flex items-center justify-between text-[13px] text-ink-mute">
+      <div className="max-w-5xl mx-auto px-7 py-5 flex items-center justify-between text-[13px] text-ink-mute">
         <p>
           made with <span className="text-coral">♥</span> by nursecoder
         </p>

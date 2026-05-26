@@ -9,6 +9,7 @@ export interface Tool {
   status: ToolStatus;
   icon: string;
   featured?: boolean;
+  hasGuide?: boolean;
 
   liveUrl?: string;
   downloadUrl?: string;
@@ -41,16 +42,17 @@ export const tools: Tool[] = [
     status: "active",
     icon: "StickyNote",
     featured: true,
+    hasGuide: true,
     screenshot: "/screenshots/slide-memo.png",
     downloadUrl:
       "https://github.com/yujeong0411/SlideMemo/releases/latest/download/SlideMemo-Setup.exe",
     githubUrl: "https://github.com/yujeong0411/SlideMemo",
     issueUrl: "https://github.com/yujeong0411/SlideMemo/issues",
     quickStart: [
-      "SlideMemo-Setup.exe를 다운로드해서 더블클릭하세요",
-      "관리자 권한 없이 자동으로 설치됩니다",
-      "시작 메뉴에서 Slide Memo를 실행하세요",
-      "화면 가장자리 세로 탭을 클릭하면 메모장이 펼쳐집니다",
+      "SlideMemo-Setup.exe를 다운로드해서 더블클릭하세요.",
+      "PC 보호창이 뜨면 추가정보를 누르고 실행을 누르세요.",
+      "시작 메뉴에서 Slide Memo를 실행하세요.",
+      "화면 가장자리 세로 탭을 클릭하면 메모장이 펼쳐집니다.",
     ],
     features: [
       {

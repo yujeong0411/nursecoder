@@ -54,7 +54,7 @@ const doing = [
 
 export default function AboutPage() {
   return (
-    <div className="max-w-3xl mx-auto px-7 py-16 space-y-12">
+    <div className="max-w-5xl mx-auto px-7 py-16 space-y-12">
       {/* Hero */}
       <section className="text-center space-y-4">
         <div className="mx-auto w-24 h-24 rounded-full bg-white border border-hairline flex items-center justify-center overflow-hidden">

@@ -9,6 +9,7 @@ import {
   ExternalLink,
   AlertCircle,
   Notebook,
+  BookOpen,
 } from "lucide-react";
 import { tools, getToolBySlug } from "@/data/tools";
 import { Icon } from "@/components/Icon";
@@ -47,7 +48,7 @@ export default async function ToolDetailPage({
   const recentChangelog = tool.changelog.slice(0, 3);
 
   return (
-    <div className="max-w-3xl mx-auto px-7 py-12 space-y-10">
+    <div className="max-w-5xl mx-auto px-7 py-12 space-y-10">
       {/* Breadcrumb */}
       <nav className="text-[12px] text-ink-mute" aria-label="Breadcrumb">
         <Link href="/tools" className="hover:text-ink transition-colors">
@@ -200,6 +201,34 @@ export default async function ToolDetailPage({
               </div>
             ))}
           </div>
+        </section>
+      )}
+
+      {/* 자세한 사용법 CTA */}
+      {tool.hasGuide && (
+        <section>
+          <Link
+            href={`/tools/${tool.slug}/guide`}
+            className="relative block rounded-xl overflow-hidden bg-gradient-to-br from-coral-soft to-lavender-soft p-6 hover:opacity-90 transition-opacity"
+          >
+            <span className="inline-flex items-center rounded-md bg-white border border-hairline px-1.5 py-0.5 text-[11px] text-ink-mute mb-3">
+              자세히 보기
+            </span>
+            <p className="text-ink text-[16px] mb-1">
+              {tool.name} 완전 사용 가이드
+            </p>
+            <p className="text-ink-soft text-[13px]">
+              모든 기능, 단축키, 설정 가이드를 한 곳에 정리했어요.
+            </p>
+            <span className="mt-4 inline-flex items-center gap-1 bg-ink text-white px-3 py-1.5 rounded-[10px] text-[13px]">
+              가이드 읽기
+              <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+            </span>
+            <BookOpen
+              className="absolute right-5 bottom-4 w-16 h-16 text-ink opacity-[0.07]"
+              aria-hidden="true"
+            />
+          </Link>
         </section>
       )}
 

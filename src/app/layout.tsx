@@ -6,7 +6,8 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "NurseCoder — 간호사가 만든 일상의 작은 도구들",
   description:
-    "최유정(간호사 출신 개발자)이 만든 도구들을 모아둔 곳. 누구나 다운로드해서 바로 쓸 수 있어요.",
+    "의료 현장에서 일하는 개발자가 만든 도구들을 모아둔 곳. 누구나 다운로드해서 바로 쓸 수 있어요.",
+  icons: { icon: "/logo-64.png" },
 };
 
 export default function RootLayout({

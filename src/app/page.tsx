@@ -7,7 +7,7 @@ export default function Home() {
   const featured = tools.filter((t) => t.featured).slice(0, 3);
 
   return (
-    <div className="max-w-3xl mx-auto px-7 py-16 space-y-14">
+    <div className="max-w-5xl mx-auto px-7 py-16 space-y-14">
       {/* Hero */}
       <section className="relative">
         <div className="relative z-10 space-y-5">

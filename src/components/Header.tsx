@@ -6,7 +6,7 @@ import { profile } from "@/data/profile";
 export function Header() {
   return (
     <header className="border-b border-hairline bg-bg">
-      <div className="max-w-3xl mx-auto px-7 py-4 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-7 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5" aria-label="NurseCoder 홈">
           <Image
             src="/logo-64.png"
