@@ -23,10 +23,10 @@ export function ToolCard({ tool }: { tool: Tool }) {
       </div>
 
       <div className="space-y-1">
-        <h3 className="text-ink text-[15px] group-hover:text-coral transition-colors">
+        <h3 className="text-ink text-[15px] lg:text-[16px] group-hover:text-coral transition-colors">
           {tool.name}
         </h3>
-        <p className="text-ink-soft text-[13px] line-clamp-2 leading-snug">
+        <p className="text-ink-soft text-[13px] lg:text-[14px] line-clamp-2 leading-snug">
           {tool.tagline}
         </p>
       </div>

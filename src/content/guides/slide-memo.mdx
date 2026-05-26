@@ -1,23 +1,175 @@
 ## 설치하기
 
-준비 중입니다.
+1. 아래 링크를 클릭하면 설치 파일이 바로 다운로드됩니다.
+   **[⬇ SlideMemo-Setup.exe 다운로드](https://github.com/yujeong0411/SlideMemo/releases/latest/download/SlideMemo-Setup.exe)**
+2. 다운로드된 파일을 실행합니다. PC 보호창이 뜨면 추가정보를 누르고 실행하세요.
+
+![설치 화면](/screenshots/slide-memo/install-setup.png)
+
+3. 설치가 완료되면 바탕화면 아이콘과 시스템 트레이에서 실행됩니다.
+
+![설치 완료](/screenshots/slide-memo/install-complete.png)
+
+<Callout type="info">
+제거할 때는 제어판 → 앱 → Slide Memo에서 제거하면 됩니다.
+</Callout>
+
+---
 
 ## 기본 사용법
 
-준비 중입니다.
+화면 오른쪽(또는 왼쪽) 가장자리에 세로 탭 열이 표시됩니다.
+탭을 클릭하면 메모 본문이 펼쳐지고, 다시 클릭하거나 <Shortcut>Esc</Shortcut>를 누르면 접힙니다.
+
+![사이드바 설명](/screenshots/slide-memo/sidebar.png)
+
+- **새 메모**: 탭 열 하단 **＋** 버튼 또는 <Shortcut>Ctrl+N</Shortcut>
+- **메모 전환**: 탭 클릭
+- **메모 고정 / 삭제**: 탭 우클릭
+
+![메모 우클릭 메뉴](/screenshots/slide-memo/memo-context-menu.png)
+
+- **색상 변경**: 본문 상단 색상 점 클릭
+
+![사용자 지정 메모 색](/screenshots/slide-memo/memo-color.png)
+
+- **정렬**: 본문 상단 정렬 드롭다운
+
+![정렬](/screenshots/slide-memo/sort.png)
+
+- **검색**: <Shortcut>Ctrl+F</Shortcut> 또는 검색창에서 제목·본문 검색
+
+![제목·본문 검색](/screenshots/slide-memo/search.png)
+
+- **가장자리 전환**: 시스템 트레이 아이콘 우클릭 → 왼쪽/오른쪽 전환
+
+![시스템 트레이](/screenshots/slide-memo/system-tray.png)
+
+- **자동 저장**: 입력 후 0.6초 뒤 자동 저장됩니다.
+
+---
 
 ## 단축키 모음
 
-준비 중입니다.
+### 메모 관리
+
+| 단축키 | 기능 |
+|--------|------|
+| `Ctrl+N` | 새 메모 생성 |
+| `Ctrl+S` | 즉시 저장 |
+| `Ctrl+F` | 메모 검색 |
+| `Ctrl+Shift+C` | 메모 전체 텍스트 복사 |
+| `Ctrl+Shift+D` | 현재 메모 휴지통으로 이동 |
+| `Esc` | 메모 접기 / AI 작업 취소 |
+
+### 서식
+
+| 단축키 | 기능 |
+|--------|------|
+| `Ctrl+B` | 굵게 |
+| `Ctrl+I` | 기울임 |
+| `Ctrl+U` | 밑줄 |
+| `Ctrl+K` | 링크 삽입 |
+
+### 날짜·시간 삽입
+
+| 단축키 | 형식 | 예시 |
+|--------|------|------|
+| `F5` | 메모장 포맷 | 오전 09:30 2025-05-26 |
+| `Ctrl+;` | 날짜만 | 2025-05-26 |
+| `Ctrl+Shift+;` | 시간만 | 09:30 |
+| `Ctrl+Alt+;` | ISO 형식 | 2025-05-26T09:30:00 |
+| `Ctrl+Shift+H` | 한국식 | 2025년 05월 26일 월요일 |
+
+### AI 기능
+
+| 단축키 | 기능 |
+|--------|------|
+| `Ctrl+Alt+S` | 요약 |
+| `Ctrl+Alt+T` | 번역 (한↔영) |
+| `Ctrl+Alt+P` | 맞춤법 교정 |
+| `Ctrl+Alt+H` | 제목 자동 생성 |
+| `Ctrl+Alt+K` | 키워드 추출 |
+
+---
 
 ## AI 기능 사용하기
 
-준비 중입니다.
+설정(⚙)에서 API 키를 입력하고 AI 기능을 활성화합니다.
+
+![AI 기능 설정 창](/screenshots/slide-memo/ai-settings.png)
+
+활성화하면 에디터 하단에 기능 버튼이 표시됩니다.
+
+![AI 기능 버튼](/screenshots/slide-memo/ai-toolbar.png)
+
+| 기능 | 설명 |
+|------|------|
+| 요약 | 메모 내용을 간결하게 요약합니다. |
+| 번역 (한↔영) | 한국어↔영어 자동 감지 후 번역합니다. |
+| 맞춤법 교정 | 철자·문법 오류를 수정합니다. |
+| 제목 생성 | 내용 기반으로 제목을 자동 생성합니다. |
+| 키워드 추출 | 핵심 키워드 5~10개를 추출합니다. |
+
+단축키, 서식바 버튼, 에디터 우클릭 메뉴에서 모두 실행할 수 있습니다.
+진행 중 취소하려면 <Shortcut>Esc</Shortcut>를 누르세요.
+
+---
 
 ## 음성 녹음 사용하기
 
-준비 중입니다.
+설정에서 **음성 녹음 기능 사용**을 체크하고 OpenAI API 키를 입력합니다.
+
+<Steps>
+  <Step title="녹음 시작">
+    서식바의 🎙 버튼을 누릅니다.
+  </Step>
+  <Step title="녹음 종료">
+    버튼을 다시 누르면 녹음이 끝납니다.
+  </Step>
+  <Step title="텍스트 변환">
+    Whisper가 음성을 텍스트로 변환해 에디터에 자동 삽입합니다.
+  </Step>
+</Steps>
+
+![녹음 버튼](/screenshots/slide-memo/record-button.png)
+
+<Callout type="info">
+마이크 권한이 필요합니다. 최대 녹음 시간은 설정에서 조절할 수 있습니다 (기본 60초).
+</Callout>
+
+---
+
+## 휴지통
+
+삭제한 메모는 30일간 휴지통에 보관됩니다. 탭 열 하단 🗑 버튼으로 열고 복원하거나 영구 삭제할 수 있습니다.
+
+![휴지통](/screenshots/slide-memo/trash.png)
+
+---
+
+## 클립보드 연동
+
+클립보드 감시 기능을 활성화하면 복사한 텍스트를 자동으로 메모에 추가할 수 있습니다.
+
+![클립보드 설정](/screenshots/slide-memo/clipboard-settings.png)
+
+---
 
 ## 문제 해결
 
-준비 중입니다.
+**앱이 화면에 보이지 않아요**
+
+시스템 트레이(우측 하단 시계 근처) 아이콘을 클릭하거나 더블클릭하세요.
+
+**탭 열이 너무 좁거나 넓어요**
+
+설정 → 인덱스 탭 폭 슬라이더에서 조절하세요.
+
+**AI 기능 버튼이 보이지 않아요**
+
+설정 → AI 탭에서 API 키를 입력하고 AI 기능을 활성화하세요.
+
+**데이터 위치**
+
+메모 데이터는 `%LOCALAPPDATA%\SlideMemo` 폴더에 SQLite 파일로 저장됩니다.

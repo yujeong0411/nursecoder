@@ -89,22 +89,22 @@ export default async function GuidePage({
       </div>
 
       {/* Grid: TOC sidebar + content */}
-      <div className="lg:grid lg:grid-cols-[220px_1fr] lg:gap-12 lg:items-start">
+      <div className="lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
         {/* TOC */}
         {headings.length > 0 && (
-          <aside>
+          <aside className="lg:sticky lg:top-24 lg:self-start">
             {/* Mobile: 접이식 */}
             <details className="lg:hidden bg-surface border border-hairline rounded-xl mb-8 open:pb-2">
-              <summary className="px-4 py-3 text-[13px] text-ink cursor-pointer select-none list-none flex items-center justify-between">
+              <summary className="px-4 py-3 text-[14px] text-ink cursor-pointer select-none list-none flex items-center justify-between">
                 목차
-                <span className="text-ink-mute text-[11px]">펼치기</span>
+                <span className="text-ink-mute text-[12px]">펼치기</span>
               </summary>
               <nav className="px-4 pb-2 space-y-1">
                 {headings.map((h) => (
                   <a
                     key={h.id}
                     href={`#${h.id}`}
-                    className="block text-[13px] text-ink-soft hover:text-ink transition-colors py-1"
+                    className="block text-[14px] text-ink-soft hover:text-ink transition-colors py-1"
                   >
                     {h.text}
                   </a>
@@ -112,8 +112,8 @@ export default async function GuidePage({
               </nav>
             </details>
             {/* Desktop: 사이드바 */}
-            <nav className="hidden lg:block sticky top-24 bg-surface border border-hairline rounded-xl p-4">
-              <p className="text-[11px] text-ink-mute mb-3 uppercase tracking-wide">
+            <nav className="hidden lg:block bg-surface border border-hairline rounded-xl p-4">
+              <p className="text-[15px] text-ink-mute mb-3 uppercase tracking-wide">
                 목차
               </p>
               <div className="space-y-0.5">
@@ -121,7 +121,7 @@ export default async function GuidePage({
                   <a
                     key={h.id}
                     href={`#${h.id}`}
-                    className="block text-[13px] text-ink-soft hover:text-ink transition-colors py-1.5 border-l-2 border-transparent hover:border-coral pl-3"
+                    className="block text-[15px] text-ink-soft hover:text-ink transition-colors py-1.5 border-l-2 border-transparent hover:border-coral pl-3"
                   >
                     {h.text}
                   </a>

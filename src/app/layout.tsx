@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "NurseCoder — 간호사가 만든 일상의 작은 도구들",
@@ -17,10 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className="h-full antialiased">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-bg text-ink-soft">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

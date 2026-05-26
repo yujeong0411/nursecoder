@@ -3,6 +3,35 @@ import { ArrowRight, Heart, Plus } from "lucide-react";
 import { tools } from "@/data/tools";
 import { ToolCard } from "@/components/ToolCard";
 
+const WAVE_LINES = ["현장에서 만든", "일상의 작은 도구들"] as const;
+
+function WaveText() {
+  let charIndex = 0;
+  return (
+    <>
+      {WAVE_LINES.map((line, lineIdx) => (
+        <span key={lineIdx} className="block">
+          {line.split("").map((char) => {
+            const delay = (charIndex++ * 0.06).toFixed(2);
+            return (
+              <span
+                key={delay}
+                className="inline-block"
+                style={{
+                  animation: `wave-char 1.2s ease-in-out 1`,
+                  animationDelay: `${delay}s`,
+                }}
+              >
+                {char === " " ? " " : char}
+              </span>
+            );
+          })}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export default function Home() {
   const featured = tools.filter((t) => t.featured).slice(0, 3);
 
@@ -11,7 +40,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative">
         <div className="relative z-10 space-y-5">
-          <p className="text-[13px] tracking-wide">
+          <p className="text-[13px] lg:text-[16px] tracking-wide">
             <span className="text-coral">care</span>
             <span className="text-ink-mute"> · </span>
             <span className="text-sage-deep">code</span>
@@ -19,13 +48,14 @@ export default function Home() {
             <span className="text-lavender-deep">create</span>
           </p>
 
-          <h1 className="text-[34px] text-ink leading-[1.25]">
-            현장에서 만든
-            <br />
-            일상의 작은 도구들
+          <h1
+            className="text-[34px] lg:text-[54px] text-ink leading-[1.35]"
+            aria-label="현장에서 만든 일상의 작은 도구들"
+          >
+            <WaveText />
           </h1>
 
-          <p className="text-ink-soft text-[15px]">
+          <p className="text-ink-soft text-[15px] lg:text-[18px]">
             필요해서 만들기 시작했어요.
             <br />
             누구나 다운로드해서 바로 쓸 수 있습니다.
@@ -34,14 +64,14 @@ export default function Home() {
           <div className="flex flex-wrap gap-2 pt-1">
             <Link
               href="/tools"
-              className="inline-flex items-center gap-1.5 bg-coral text-white px-4 py-2 rounded-[10px] text-[14px] hover:bg-coral/90 transition-colors"
+              className="inline-flex items-center gap-1.5 bg-coral text-white px-4 py-2 rounded-[10px] text-[14px] lg:text-[16px] hover:bg-coral/90 transition-colors"
             >
               도구 둘러보기
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
             <Link
               href="/about"
-              className="inline-flex items-center bg-blush text-ink-soft border border-hairline px-4 py-2 rounded-[10px] text-[14px] hover:text-ink hover:border-ink-mute/30 transition-colors"
+              className="inline-flex items-center bg-blush text-ink-soft border border-hairline px-4 py-2 rounded-[10px] text-[14px] lg:text-[16px] hover:text-ink hover:border-ink-mute/30 transition-colors"
             >
               소개
             </Link>
@@ -65,7 +95,7 @@ export default function Home() {
       {/* 대표 도구 */}
       <section className="space-y-4">
         <div className="flex items-end justify-between">
-          <h2 className="text-ink text-[20px]">대표 도구</h2>
+          <h2 className="text-ink text-[20px] lg:text-[22px]">대표 도구</h2>
           <Link
             href="/tools"
             className="text-[13px] text-ink-mute hover:text-ink transition-colors inline-flex items-center gap-0.5"

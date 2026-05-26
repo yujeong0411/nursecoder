@@ -67,8 +67,8 @@ export default function AboutPage() {
             priority
           />
         </div>
-        <h1 className="text-[28px] text-ink leading-tight">{profile.name}</h1>
-        <p className="text-ink-soft text-[15px]">{profile.tagline}</p>
+        <h1 className="text-[28px] lg:text-[34px] text-ink leading-tight">{profile.name}</h1>
+        <p className="text-ink-soft text-[15px] lg:text-[17px]">{profile.tagline}</p>
         <p className="text-[13px] tracking-wide pt-1">
           <span className="text-coral">care</span>
           <span className="text-ink-mute"> · </span>
@@ -80,7 +80,7 @@ export default function AboutPage() {
 
       {/* 소개 */}
       <section>
-        <div className="bg-surface border border-hairline rounded-xl p-6 space-y-4 text-ink-soft text-[15px] leading-[1.8]">
+        <div className="bg-surface border border-hairline rounded-xl p-6 space-y-4 text-ink-soft text-[15px] lg:text-[16px] leading-[1.8]">
           <p>
             의료 현장에서 일하다가 직접 필요한 도구를 만들기 시작했어요.
             반복되는 일을 줄이고 싶어서 파이썬을 배웠고, 그게 첫 도구가 됐어요.
@@ -95,7 +95,7 @@ export default function AboutPage() {
 
       {/* 하는 일 */}
       <section className="space-y-4">
-        <h2 className="text-ink text-[20px]">하는 일</h2>
+        <h2 className="text-ink text-[20px] lg:text-[22px]">하는 일</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {doing.map((d) => (
             <div
@@ -107,8 +107,8 @@ export default function AboutPage() {
               >
                 <d.icon className="w-[18px] h-[18px]" aria-hidden="true" />
               </span>
-              <h3 className="text-ink text-[14px]">{d.title}</h3>
-              <p className="text-ink-soft text-[13px] leading-snug">{d.desc}</p>
+              <h3 className="text-ink text-[14px] lg:text-[16px]">{d.title}</h3>
+              <p className="text-ink-soft text-[13px] lg:text-[15px] leading-snug">{d.desc}</p>
             </div>
           ))}
         </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
 
       {/* 연락하기 */}
       <section className="space-y-4">
-        <h2 className="text-ink text-[20px]">연락하기</h2>
+        <h2 className="text-ink text-[20px] lg:text-[22px]">연락하기</h2>
         <div className="bg-surface border border-hairline rounded-xl divide-y divide-hairline">
           <EmailRow email={profile.email} />
 

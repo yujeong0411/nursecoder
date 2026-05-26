@@ -11,18 +11,18 @@ export function Header() {
           <Image
             src="/logo-64.png"
             alt=""
-            width={28}
-            height={28}
+            width={40}
+            height={40}
             priority
-            className="rounded-md"
+            className="w-7 h-7 lg:w-10 lg:h-10 rounded-md"
           />
-          <span className="hidden sm:inline text-ink text-[15px]">
+          <span className="hidden sm:inline text-ink text-[15px] lg:text-[20px]">
             <span className="text-coral-deep">Nurse</span>
             <span className="text-sage-deep">Coder</span>
           </span>
         </Link>
 
-        <nav className="flex items-center gap-5 text-[14px] text-ink-soft">
+        <nav className="flex items-center gap-6 text-[14px] lg:text-[17px] text-ink-soft">
           <Link href="/tools" className="hover:text-ink transition-colors">
             Tools
           </Link>
