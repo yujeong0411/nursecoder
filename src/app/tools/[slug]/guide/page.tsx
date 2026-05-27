@@ -45,7 +45,7 @@ export default async function GuidePage({
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-7 py-12">
       {/* Breadcrumb */}
-      <nav className="text-[12px] text-ink-mute mb-8" aria-label="Breadcrumb">
+      <nav className="text-[12px] lg:text-[14px] text-ink-mute mb-8" aria-label="Breadcrumb">
         <Link href="/tools" className="hover:text-ink transition-colors">
           Tools
         </Link>
@@ -62,22 +62,22 @@ export default async function GuidePage({
 
       {/* Header */}
       <div className="flex items-start justify-between gap-4 mb-10">
-        <div className="flex items-start gap-4">
+        <div className="flex items-center gap-4">
           {tool.logo ? (
             <Image
               src={tool.logo}
               alt=""
-              width={56}
-              height={56}
-              className="w-11 h-11 sm:w-14 sm:h-14 shrink-0 rounded-xl object-contain"
+              width={96}
+              height={96}
+              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 shrink-0 rounded-xl object-contain"
             />
           ) : (
             <span
-              className={`w-11 h-11 sm:w-14 sm:h-14 shrink-0 rounded-xl ${c.bg} ${c.fg} flex items-center justify-center`}
+              className={`w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 shrink-0 rounded-xl ${c.bg} ${c.fg} flex items-center justify-center`}
             >
               <Icon
                 name={tool.icon}
-                className="w-[22px] h-[22px] sm:w-7 sm:h-7"
+                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
                 aria-hidden="true"
               />
             </span>

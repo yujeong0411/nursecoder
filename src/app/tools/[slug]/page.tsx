@@ -50,7 +50,7 @@ export default async function ToolDetailPage({
   return (
     <div className="max-w-5xl mx-auto px-7 py-12 space-y-10">
       {/* Breadcrumb */}
-      <nav className="text-[12px] text-ink-mute" aria-label="Breadcrumb">
+      <nav className="text-[12px] lg:text-[14px] text-ink-mute" aria-label="Breadcrumb">
         <Link href="/tools" className="hover:text-ink transition-colors">
           Tools
         </Link>
