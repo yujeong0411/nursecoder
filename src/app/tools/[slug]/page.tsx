@@ -185,19 +185,23 @@ export default async function ToolDetailPage({
                 key={i}
                 className="bg-surface border border-hairline rounded-xl p-4 space-y-2"
               >
-                <span
-                  className={`w-9 h-9 rounded-md ${c.bg} ${c.fg} flex items-center justify-center`}
-                >
-                  <Icon
-                    name={f.icon}
-                    className="w-[18px] h-[18px]"
-                    aria-hidden="true"
-                  />
-                </span>
-                <h3 className="text-ink text-[14px] lg:text-[16px]">{f.title}</h3>
-                <p className="text-ink-soft text-[13px] lg:text-[15px] leading-snug">
-                  {f.desc}
-                </p>
+                <div className="flex items-start gap-3">
+                  <span
+                    className={`w-12 h-12 shrink-0 rounded-md ${c.bg} ${c.fg} flex items-center justify-center`}
+                  >
+                    <Icon
+                      name={f.icon}
+                      className="w-6 h-6"
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <div className="space-y-1.5">
+                    <h3 className="text-ink text-[14px] lg:text-[16px]">{f.title}</h3>
+                    <p className="text-ink-soft text-[13px] lg:text-[15px] leading-snug">
+                      {f.desc}
+                    </p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -211,13 +215,10 @@ export default async function ToolDetailPage({
             href={`/tools/${tool.slug}/guide`}
             className="relative block rounded-xl overflow-hidden bg-gradient-to-br from-coral-soft to-lavender-soft p-6 hover:opacity-90 transition-opacity"
           >
-            <span className="inline-flex items-center rounded-md bg-white border border-hairline px-1.5 py-0.5 text-[11px] text-ink-mute mb-3">
-              자세히 보기
-            </span>
-            <p className="text-ink text-[16px] mb-1">
+            <p className="text-ink text-[16px] lg:text-[18px] mb-1">
               {tool.name} 완전 사용 가이드
             </p>
-            <p className="text-ink-soft text-[13px]">
+            <p className="text-ink-soft text-[13px] lg:text-[15px]">
               모든 기능, 단축키, 설정 가이드를 한 곳에 정리했어요.
             </p>
             <span className="mt-4 inline-flex items-center gap-1 bg-ink text-white px-3 py-1.5 rounded-[10px] text-[13px]">
@@ -279,7 +280,7 @@ export default async function ToolDetailPage({
           </div>
           <ul className="bg-surface border border-hairline rounded-xl divide-y divide-hairline">
             {recentChangelog.map((entry, i) => (
-              <li key={entry.version} className="px-4 py-3 space-y-1">
+              <li key={entry.version} className="px-4 py-4 space-y-2">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="inline-flex items-center rounded-md bg-coral-soft text-coral px-1.5 py-0.5 text-[11px]">
                     v{entry.version}

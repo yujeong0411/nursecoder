@@ -5,10 +5,12 @@
 2. 다운로드된 파일을 실행합니다. PC 보호창이 뜨면 추가정보를 누르고 실행하세요.
 
 ![설치 화면](/screenshots/slide-memo/install-setup.png)
+<br/>
 
 3. 설치가 완료되면 바탕화면 아이콘과 시스템 트레이에서 실행됩니다.
 
 ![설치 완료](/screenshots/slide-memo/install-complete.png)
+<br/>
 
 <Callout type="info">
 제거할 때는 제어판 → 앱 → Slide Memo에서 제거하면 됩니다.
@@ -19,33 +21,43 @@
 ## 기본 사용법
 
 화면 오른쪽(또는 왼쪽) 가장자리에 세로 탭 열이 표시됩니다.
-탭을 클릭하면 메모 본문이 펼쳐지고, 다시 클릭하거나 <Shortcut>Esc</Shortcut>를 누르면 접힙니다.
 
 ![사이드바 설명](/screenshots/slide-memo/sidebar.png)
 
-- **새 메모**: 탭 열 하단 **＋** 버튼 또는 <Shortcut>Ctrl+N</Shortcut>
-- **메모 전환**: 탭 클릭
-- **메모 고정 / 삭제**: 탭 우클릭
+1. 탭을 클릭하면 메모 본문이 펼쳐지고, 다시 클릭하거나 <Shortcut>Esc</Shortcut>를 누르면 접힙니다.
+2. 새 메모 : 탭 열 하단 **＋** 버튼 또는 <Shortcut>Ctrl+N</Shortcut>
+3. 휴지통 : 삭제된 메모 목록
+4. 설정 : 메모장 기본 설정 및 AI 설정
+5. 세로 이동 : 상단 손 모양 아이콘 드래그로 세로 위치 조절
+
+<br/>
 
 ![메모 우클릭 메뉴](/screenshots/slide-memo/memo-context-menu.png)
 
-- **색상 변경**: 본문 상단 색상 점 클릭
+- **메모 고정 / 휴지통으로 이동** : 해당 메모 탭을 **오른쪽 마우스**로 클릭
+<br/>
 
 ![사용자 지정 메모 색](/screenshots/slide-memo/memo-color.png)
 
-- **정렬**: 본문 상단 정렬 드롭다운
+- **메모 색상 변경** : 제목 옆 색상 선택 
+- 사용자 지정 색상도 가능
+<br/>
 
 ![정렬](/screenshots/slide-memo/sort.png)
 
-- **검색**: <Shortcut>Ctrl+F</Shortcut> 또는 검색창에서 제목·본문 검색
+- **정렬**: 본문 상단 정렬 드롭다운
+<br/>
 
 ![제목·본문 검색](/screenshots/slide-memo/search.png)
 
-- **가장자리 전환**: 시스템 트레이 아이콘 우클릭 → 왼쪽/오른쪽 전환
+- **검색**: <Shortcut>Ctrl+F</Shortcut> 또는 검색창에서 제목·본문 검색
+- 필터링된 메모 탭만 노출
+<br/>
 
 ![시스템 트레이](/screenshots/slide-memo/system-tray.png)
 
-- **자동 저장**: 입력 후 0.6초 뒤 자동 저장됩니다.
+- **가장자리 전환**: 시스템 트레이 아이콘 우클릭 → 왼쪽/오른쪽 전환
+- **자동 저장**: 입력 후 0.6초 뒤 자동 저장
 
 ---
 
@@ -97,8 +109,9 @@
 
 설정(⚙)에서 API 키를 입력하고 AI 기능을 활성화합니다.
 
-![AI 기능 설정 창](/screenshots/slide-memo/ai-settings.png)
+![AI 기능 설정 창](/screenshots/slide-memo/ai-setting.png)
 
+<br/>
 활성화하면 에디터 하단에 기능 버튼이 표시됩니다.
 
 ![AI 기능 버튼](/screenshots/slide-memo/ai-toolbar.png)
@@ -120,6 +133,8 @@
 
 설정에서 **음성 녹음 기능 사용**을 체크하고 OpenAI API 키를 입력합니다.
 
+![녹음 기능 설정 창](/screenshots/slide-memo/record-setting.png)
+
 <Steps>
   <Step title="녹음 시작">
     서식바의 🎙 버튼을 누릅니다.
@@ -135,7 +150,7 @@
 ![녹음 버튼](/screenshots/slide-memo/record-button.png)
 
 <Callout type="info">
-마이크 권한이 필요합니다. 최대 녹음 시간은 설정에서 조절할 수 있습니다 (기본 60초).
+마이크 권한이 필요합니다. 최대 녹음 시간은 설정에서 조절할 수 있습니다 (기본 300초).
 </Callout>
 
 ---
@@ -148,11 +163,19 @@
 
 ---
 
-## 클립보드 연동
+## 기타 설정
 
-클립보드 감시 기능을 활성화하면 복사한 텍스트를 자동으로 메모에 추가할 수 있습니다.
+설정(⚙) → **일반** 탭에서 아래 항목 조정 가능.
 
-![클립보드 설정](/screenshots/slide-memo/clipboard-settings.png)
+![일반 설정](/screenshots/slide-memo/settings.png)
+
+1. **앱 위치** : 오른쪽 / 왼쪽 가장자리 선택 (트레이 우클릭으로도 전환 가능)  
+   **앱 표시 방식** : 트레이만(작업표시줄에 안 뜸) · 작업표시줄만 · 둘 다 표시
+2. **인덱스 탭 설정** : 가로 폭(24~60 px) · 세로 길이(60~200 px) 슬라이더
+3. **시스템 시작 시 자동 실행** : Windows 로그인 시 자동 시작
+4. **메모 앱 펼칠 때 클립보드 자동 감지** : 메모를 펼칠 때 클립보드에 이미지가 있으면 새 메모 생성 배너 표시
+
+![클립보드 감지 배너](/screenshots/slide-memo/clipboard-settings.png)
 
 ---
 

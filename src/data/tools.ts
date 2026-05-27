@@ -75,6 +75,16 @@ export const tools: Tool[] = [
         title: "음성 → 메모",
         desc: "Whisper로 자동 변환",
       },
+      {
+        icon: "ClipboardPaste",
+        title: "클립보드 자동 감지",
+        desc: "펼칠 때 텍스트·이미지를 바로 새 메모로",
+      },
+      {
+        icon: "Type",
+        title: "리치 에디터",
+        desc: "굵게·기울임·불릿·이미지 붙여넣기 지원",
+      },
     ],
     requirements: [
       "Windows 10 이상",
@@ -84,6 +94,11 @@ export const tools: Tool[] = [
     ],
     blogPosts: [],
     changelog: [
+      {
+        version: "1.0.1",
+        date: "2026.05.26",
+        note: "부트로더 스플래쉬 잔류 문제 수정",
+      },
       {
         version: "1.0.0",
         date: "2026.05.25",

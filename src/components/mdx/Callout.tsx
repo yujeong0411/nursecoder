@@ -44,7 +44,7 @@ export function Callout({
         className={`w-4 h-4 ${s.iconColor} shrink-0 mt-0.5`}
         aria-hidden="true"
       />
-      <div className="text-[14px] text-ink-soft leading-relaxed">{children}</div>
+      <div className="callout-content text-ink-soft leading-relaxed">{children}</div>
     </div>
   );
 }

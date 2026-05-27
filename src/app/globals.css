@@ -25,7 +25,7 @@
   /* 텍스트 */
   --color-ink: #6b4f56;
   --color-ink-soft: #735660;
-  --color-ink-mute: #8e7680;
+  --color-ink-mute: #7a6470;
 
   /* 테두리 */
   --color-hairline: rgba(139, 107, 115, 0.12);
@@ -104,20 +104,35 @@ h6 {
 }
 .mdx-body table {
   width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 16px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 20px;
   font-size: 13px;
+  border: 1px solid rgba(139, 107, 115, 0.22);
+  border-radius: 12px;
+  overflow: hidden;
 }
 .mdx-body th,
 .mdx-body td {
-  border: 1px solid var(--color-hairline);
-  padding: 8px 12px;
+  padding: 11px 16px;
   text-align: left;
+  border-bottom: 1px solid rgba(139, 107, 115, 0.12);
+  border-right: 1px solid rgba(139, 107, 115, 0.12);
+}
+.mdx-body th:last-child,
+.mdx-body td:last-child {
+  border-right: none;
+}
+.mdx-body tr:last-child td {
+  border-bottom: none;
 }
 .mdx-body th {
-  background: var(--color-surface);
+  background: #f5d5d5;
   color: var(--color-ink);
   font-weight: 500;
+}
+.mdx-body tbody tr:nth-child(even) td {
+  background: var(--color-surface);
 }
 .mdx-body a {
   color: #b85c5c !important;
@@ -149,10 +164,16 @@ h6 {
 .mdx-body img {
   border-radius: 12px;
   border: 1px solid var(--color-hairline);
-  max-width: 640px;
-  width: 100%;
-  margin: 16px 0;
+  max-width: 480px;
+  width: 80%;
+  margin: 16px auto;
   display: block;
+}
+.mdx-body .callout-content {
+  font-size: 14px;
+}
+.mdx-body .callout-content p:last-child {
+  margin-bottom: 0;
 }
 .mdx-body blockquote {
   border-left: 2px solid var(--color-hairline);
@@ -174,12 +195,18 @@ h6 {
   }
 
   .mdx-body {
-    font-size: 16px;
+    font-size: 17px;
   }
   .mdx-body h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
   .mdx-body h3 {
-    font-size: 20px;
+    font-size: 22px;
+  }
+  .mdx-body table {
+    font-size: 16px;
+  }
+  .mdx-body .callout-content {
+    font-size: 17px;
   }
 }

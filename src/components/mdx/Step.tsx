@@ -13,9 +13,9 @@ export function Step({
         {index + 1}
       </span>
       <div className="space-y-1 pt-0.5">
-        <p className="text-ink text-[14px]">{title}</p>
+        <p className="text-ink text-[14px] lg:text-[16px]">{title}</p>
         {children && (
-          <div className="text-ink-soft text-[13px] leading-snug">{children}</div>
+          <div className="text-ink-soft text-[13px] lg:text-[15px] leading-snug">{children}</div>
         )}
       </div>
     </li>
