@@ -11,7 +11,7 @@ export function CategoryBadge({
   const s = categoryStyles[category];
   return (
     <span
-      className={`inline-flex items-center rounded-md px-1.5 py-0.5 text-[11px] ${s.bg} ${s.fg} ${className}`}
+      className={`inline-flex items-center rounded-md px-2 py-0.5 text-[12px] lg:text-[13px] font-medium tracking-wide ${s.bg} ${s.fg} ${className}`}
     >
       {s.label}
     </span>

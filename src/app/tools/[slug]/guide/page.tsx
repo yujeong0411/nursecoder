@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { tools, getToolBySlug } from "@/data/tools";
@@ -62,15 +63,25 @@ export default async function GuidePage({
       {/* Header */}
       <div className="flex items-start justify-between gap-4 mb-10">
         <div className="flex items-start gap-4">
-          <span
-            className={`w-11 h-11 sm:w-14 sm:h-14 shrink-0 rounded-xl ${c.bg} ${c.fg} flex items-center justify-center`}
-          >
-            <Icon
-              name={tool.icon}
-              className="w-[22px] h-[22px] sm:w-7 sm:h-7"
-              aria-hidden="true"
+          {tool.logo ? (
+            <Image
+              src={tool.logo}
+              alt=""
+              width={56}
+              height={56}
+              className="w-11 h-11 sm:w-14 sm:h-14 shrink-0 rounded-xl object-contain"
             />
-          </span>
+          ) : (
+            <span
+              className={`w-11 h-11 sm:w-14 sm:h-14 shrink-0 rounded-xl ${c.bg} ${c.fg} flex items-center justify-center`}
+            >
+              <Icon
+                name={tool.icon}
+                className="w-[22px] h-[22px] sm:w-7 sm:h-7"
+                aria-hidden="true"
+              />
+            </span>
+          )}
           <div className="space-y-1">
             <h1 className="text-[22px] lg:text-[30px] text-ink leading-tight">
               {tool.name} 사용 가이드

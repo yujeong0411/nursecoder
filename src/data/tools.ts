@@ -8,6 +8,7 @@ export interface Tool {
   category: ToolCategory;
   status: ToolStatus;
   icon: string;
+  logo?: string;
   featured?: boolean;
   hasGuide?: boolean;
 
@@ -41,6 +42,7 @@ export const tools: Tool[] = [
     category: "desktop",
     status: "active",
     icon: "StickyNote",
+    logo: "/screenshots/slide-memo/logo.png",
     featured: true,
     hasGuide: true,
     screenshot: "/screenshots/slide-memo.png",

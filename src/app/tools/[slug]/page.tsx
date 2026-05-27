@@ -59,19 +59,30 @@ export default async function ToolDetailPage({
       </nav>
 
       {/* Hero */}
-      <section className="flex items-start gap-4">
-        <span
-          className={`w-11 h-11 sm:w-14 sm:h-14 shrink-0 rounded-xl ${c.bg} ${c.fg} flex items-center justify-center`}
-        >
-          <Icon
-            name={tool.icon}
-            className="w-[22px] h-[22px] sm:w-7 sm:h-7"
-            aria-hidden="true"
+      <section className="flex items-center gap-4">
+        {tool.logo ? (
+          <Image
+            src={tool.logo}
+            alt={`${tool.name} 로고`}
+            width={128}
+            height={128}
+            priority
+            className="shrink-0 w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl object-contain"
           />
-        </span>
-        <div className="space-y-2 min-w-0">
-          <h1 className="text-[24px] lg:text-[30px] text-ink leading-tight">{tool.name}</h1>
+        ) : (
+          <span
+            className={`shrink-0 w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl ${c.bg} ${c.fg} flex items-center justify-center`}
+          >
+            <Icon
+              name={tool.icon}
+              className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16"
+              aria-hidden="true"
+            />
+          </span>
+        )}
+        <div className="space-y-2 min-w-0 flex-1">
           <div className="flex items-center gap-2 flex-wrap">
+            <h1 className="text-[24px] lg:text-[30px] text-ink leading-tight">{tool.name}</h1>
             <CategoryBadge category={tool.category} />
             <StatusBadge status={tool.status} />
           </div>
@@ -159,11 +170,11 @@ export default async function ToolDetailPage({
       {/* 빠른 시작 */}
       {tool.quickStart.length > 0 && (
         <section className="space-y-3">
-          <h2 className="text-ink text-[18px] lg:text-[20px]">빠른 시작</h2>
+          <h2 className="text-ink text-[20px] lg:text-[24px] font-semibold">빠른 시작</h2>
           <ol className="bg-surface border border-hairline rounded-xl p-5 space-y-3">
             {tool.quickStart.map((step, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="w-6 h-6 shrink-0 rounded-full bg-coral-soft text-coral text-[12px] flex items-center justify-center mt-0.5">
+                <span className="w-6 h-6 shrink-0 rounded-full bg-coral-soft text-coral-deep font-medium text-[12px] flex items-center justify-center mt-0.5">
                   {i + 1}
                 </span>
                 <span className="text-ink-soft text-[14px] lg:text-[16px] leading-snug pt-0.5">
@@ -178,14 +189,14 @@ export default async function ToolDetailPage({
       {/* 주요 기능 */}
       {tool.features.length > 0 && (
         <section className="space-y-3">
-          <h2 className="text-ink text-[18px] lg:text-[20px]">주요 기능</h2>
+          <h2 className="text-ink text-[20px] lg:text-[24px] font-semibold">주요 기능</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {tool.features.map((f, i) => (
               <div
                 key={i}
                 className="bg-surface border border-hairline rounded-xl p-4 space-y-2"
               >
-                <div className="flex items-start gap-3">
+                <div className="flex items-center gap-3">
                   <span
                     className={`w-12 h-12 shrink-0 rounded-md ${c.bg} ${c.fg} flex items-center justify-center`}
                   >
@@ -196,7 +207,7 @@ export default async function ToolDetailPage({
                     />
                   </span>
                   <div className="space-y-1.5">
-                    <h3 className="text-ink text-[14px] lg:text-[16px]">{f.title}</h3>
+                    <h3 className="text-ink text-[16px] lg:text-[18px] font-bold">{f.title}</h3>
                     <p className="text-ink-soft text-[13px] lg:text-[15px] leading-snug">
                       {f.desc}
                     </p>
@@ -215,7 +226,7 @@ export default async function ToolDetailPage({
             href={`/tools/${tool.slug}/guide`}
             className="relative block rounded-xl overflow-hidden bg-gradient-to-br from-coral-soft to-lavender-soft p-6 hover:opacity-90 transition-opacity"
           >
-            <p className="text-ink text-[16px] lg:text-[18px] mb-1">
+            <p className="text-ink text-[16px] lg:text-[18px] font-bold mb-1">
               {tool.name} 완전 사용 가이드
             </p>
             <p className="text-ink-soft text-[13px] lg:text-[15px]">
@@ -236,7 +247,7 @@ export default async function ToolDetailPage({
       {/* 관련 글 */}
       {tool.blogPosts.length > 0 && (
         <section className="space-y-3">
-          <h2 className="text-ink text-[18px] lg:text-[20px]">관련 글</h2>
+          <h2 className="text-ink text-[20px] lg:text-[24px] font-semibold">관련 글</h2>
           <div className="bg-surface border border-hairline rounded-xl divide-y divide-hairline">
             {tool.blogPosts.map((post, i) => (
               <a
@@ -267,7 +278,7 @@ export default async function ToolDetailPage({
       {recentChangelog.length > 0 && (
         <section id="changelog" className="space-y-3">
           <div className="flex items-end justify-between">
-            <h2 className="text-ink text-[18px] lg:text-[20px]">변경 이력</h2>
+            <h2 className="text-ink text-[20px] lg:text-[24px] font-semibold">변경 이력</h2>
             {tool.changelog.length > 3 && (
               <Link
                 href="#changelog"
@@ -282,11 +293,11 @@ export default async function ToolDetailPage({
             {recentChangelog.map((entry, i) => (
               <li key={entry.version} className="px-4 py-4 space-y-2">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <span className="inline-flex items-center rounded-md bg-coral-soft text-coral px-1.5 py-0.5 text-[11px]">
+                  <span className="inline-flex items-center rounded-md bg-coral-soft text-coral-deep font-medium tracking-wide px-2 py-0.5 text-[12px] lg:text-[13px]">
                     v{entry.version}
                   </span>
                   {i === 0 && (
-                    <span className="inline-flex items-center rounded-md bg-sage-soft text-sage-deep px-1.5 py-0.5 text-[11px]">
+                    <span className="inline-flex items-center rounded-md bg-sage-soft text-sage-deep font-medium tracking-wide px-2 py-0.5 text-[12px] lg:text-[13px]">
                       latest
                     </span>
                   )}
@@ -308,7 +319,7 @@ export default async function ToolDetailPage({
         tool.requirements &&
         tool.requirements.length > 0 && (
           <section className="space-y-3">
-            <h2 className="text-ink text-[18px] lg:text-[20px]">시스템 요구사항</h2>
+            <h2 className="text-ink text-[20px] lg:text-[24px] font-semibold">시스템 요구사항</h2>
             <ul className="bg-surface border border-hairline rounded-xl p-5 space-y-2">
               {tool.requirements.map((req, i) => (
                 <li

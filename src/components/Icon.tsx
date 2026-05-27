@@ -26,6 +26,8 @@ import {
   AlertCircle,
   Download,
   ExternalLink,
+  ClipboardPaste,
+  Type,
 } from "lucide-react";
 
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -55,6 +57,8 @@ const ICON_MAP: Record<string, LucideIcon> = {
   AlertCircle,
   Download,
   ExternalLink,
+  ClipboardPaste,
+  Type,
 };
 
 interface IconProps extends LucideProps {

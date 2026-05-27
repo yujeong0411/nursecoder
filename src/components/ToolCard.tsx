@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Tool } from "@/data/tools";
 import { Icon } from "@/components/Icon";
 import { CategoryBadge } from "@/components/CategoryBadge";
@@ -14,12 +15,22 @@ export function ToolCard({ tool }: { tool: Tool }) {
       className="group bg-surface border border-hairline rounded-xl p-4 flex flex-col gap-2.5 hover:border-coral/40 hover:-translate-y-1 hover:shadow-md hover:shadow-coral/10 transition-all duration-200"
     >
       <div className="flex items-center gap-2.5">
-        <span
-          className={`w-9 h-9 shrink-0 rounded-md ${c.bg} ${c.fg} flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}
-        >
-          <Icon name={tool.icon} className="w-[18px] h-[18px]" aria-hidden="true" />
-        </span>
-        <h3 className="text-ink text-[15px] lg:text-[18px] group-hover:text-coral transition-colors flex-1 min-w-0 truncate">
+        {tool.logo ? (
+          <Image
+            src={tool.logo}
+            alt=""
+            width={36}
+            height={36}
+            className="w-9 h-9 shrink-0 rounded-md object-contain group-hover:scale-110 transition-transform duration-200"
+          />
+        ) : (
+          <span
+            className={`w-9 h-9 shrink-0 rounded-md ${c.bg} ${c.fg} flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}
+          >
+            <Icon name={tool.icon} className="w-[18px] h-[18px]" aria-hidden="true" />
+          </span>
+        )}
+        <h3 className="text-ink text-[17px] lg:text-[20px] font-semibold group-hover:text-coral transition-colors flex-1 min-w-0 truncate">
           {tool.name}
         </h3>
         <CategoryBadge category={tool.category} />

@@ -9,7 +9,7 @@ export function Step({
 }) {
   return (
     <li className="flex items-start gap-3">
-      <span className="w-6 h-6 shrink-0 rounded-full bg-coral-soft text-coral text-[12px] flex items-center justify-center mt-0.5">
+      <span className="w-6 h-6 shrink-0 rounded-full bg-coral-soft text-coral-deep font-medium text-[12px] flex items-center justify-center mt-0.5">
         {index + 1}
       </span>
       <div className="space-y-1 pt-0.5">

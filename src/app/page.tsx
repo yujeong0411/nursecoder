@@ -40,7 +40,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative">
         <div className="relative z-10 space-y-5">
-          <p className="text-[13px] lg:text-[16px] tracking-wide">
+          <p className="text-[15px] lg:text-[19px] tracking-wide">
             <span className="text-coral">care</span>
             <span className="text-ink-mute"> · </span>
             <span className="text-sage-deep">code</span>
@@ -83,10 +83,10 @@ export default function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 hidden sm:block"
         >
-          <span className="absolute right-2 top-1 w-10 h-10 rounded-full bg-lavender-soft opacity-70" />
-          <Plus className="absolute right-24 top-12 w-5 h-5 text-sage opacity-70" />
+          <span className="absolute right-2 top-1 w-11 h-11 rounded-full bg-lavender opacity-55" />
+          <Plus className="absolute right-24 top-12 w-6 h-6 text-sage-deep opacity-90" strokeWidth={2.5} />
           <Heart
-            className="absolute right-8 bottom-4 w-6 h-6 text-coral opacity-60"
+            className="absolute right-8 bottom-4 w-7 h-7 text-coral-deep opacity-90"
             fill="currentColor"
           />
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
       {/* 대표 도구 */}
       <section className="space-y-4">
         <div className="flex items-end justify-between">
-          <h2 className="text-ink text-[20px] lg:text-[22px]">대표 도구</h2>
+          <h2 className="text-ink text-[22px] lg:text-[26px] font-semibold">대표 도구</h2>
           <Link
             href="/tools"
             className="text-[13px] text-ink-mute hover:text-ink transition-colors inline-flex items-center gap-0.5"

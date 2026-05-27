@@ -95,7 +95,7 @@ export default function AboutPage() {
 
       {/* 하는 일 */}
       <section className="space-y-4">
-        <h2 className="text-ink text-[20px] lg:text-[22px]">하는 일</h2>
+        <h2 className="text-ink text-[22px] lg:text-[26px] font-semibold">하는 일</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           {doing.map((d) => (
             <div
@@ -116,7 +116,7 @@ export default function AboutPage() {
 
       {/* 연락하기 */}
       <section className="space-y-4">
-        <h2 className="text-ink text-[20px] lg:text-[22px]">연락하기</h2>
+        <h2 className="text-ink text-[22px] lg:text-[26px] font-semibold">연락하기</h2>
         <div className="bg-surface border border-hairline rounded-xl divide-y divide-hairline">
           <EmailRow email={profile.email} />
 

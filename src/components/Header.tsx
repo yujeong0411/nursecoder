@@ -16,13 +16,13 @@ export function Header() {
             priority
             className="w-7 h-7 lg:w-10 lg:h-10 rounded-md"
           />
-          <span className="hidden sm:inline text-ink text-[15px] lg:text-[20px]">
+          <span className="hidden sm:inline text-ink text-[15px] lg:text-[20px] font-semibold">
             <span className="text-coral-deep">Nurse</span>
             <span className="text-sage-deep">Coder</span>
           </span>
         </Link>
 
-        <nav className="flex items-center gap-6 text-[14px] lg:text-[17px] text-ink-soft">
+        <nav className="flex items-center gap-6 text-[14px] lg:text-[17px] text-ink-soft font-semibold">
           <Link href="/tools" className="hover:text-ink transition-colors">
             Tools
           </Link>
