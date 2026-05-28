@@ -97,6 +97,11 @@ export const tools: Tool[] = [
     blogPosts: [],
     changelog: [
       {
+        version: "1.0.2",
+        date: "2026.05.28",
+        note: "붙여넣기 시 서식 자동 제거, 창 앞으로 나오기 개선",
+      },
+      {
         version: "1.0.1",
         date: "2026.05.26",
         note: "부트로더 스플래쉬 잔류 문제 수정",
